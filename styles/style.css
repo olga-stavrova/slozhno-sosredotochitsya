@@ -158,6 +158,7 @@
 .title-decor {
   color: var(--st-color, #000028);
   background-color: var(--accent-color, #ff0070);
+  font-size: inherit;
   font-weight: 700;
   line-height: 1.3;
 }
