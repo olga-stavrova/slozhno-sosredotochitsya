@@ -19,14 +19,14 @@
   --sc-title-color: #353430;
   --shadow-min-color: #ff8dcb;
   --bg-image: url(../images/cover-image-light.png);
+}
 
-  .rec::before {
-    display: none;
-  }
+.page.theme_light .rec::before {
+  opacity: 0;
+}
 
-  .rec::after {
-    display: none;
-  }
+.page.theme_light .rec::after {
+  opacity: 0;
 }
 
 @media (prefers-color-scheme: light) {
@@ -44,10 +44,10 @@
   }
 
   .rec::before {
-    display: none;
+    opacity: 0;
   }
 
   .rec::after {
-    display: none;
+    opacity: 0;
   }
 }

@@ -1,17 +1,4 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-:root {
-  --main-font: IBM Plex mono;
-  --text-color: #f1b2ce;
-  --bg-color: #000028;
-  --accent-color: #ff0070;
-  --title-color: #db00ff;
-  --shadow-color: #ff0070;
-  --shadow-min-color: #ff0070;
-  --button-color: 255, 0, 112;
-  --st-color: #000028;
-  --sc-title-color: #ff0070;
-  --bg-image: url(../images/cover-image-dark.png);
-}
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
@@ -35,10 +22,6 @@
   min-block-size: 100vh;
   margin-block-end: 60px;
   padding: 20px;
-}
-
-.content-section {
-  padding: 0 20px 80px 20px;
 }
 
 .rec::before {
@@ -148,15 +131,14 @@
   margin-inline-start: -20px;
 }
 
-.header__subtitle {
+.header__container {
   grid-column-start: 2;
   grid-column-end: 3;
   align-self: center;
 }
 
-.header__subtitle-text {
-  color: var(--st-color, #000028);
-  background-color: var(--accent-color, #ff0070);
+.content-section {
+  padding: 0 20px 80px 20px;
 }
 
 .section {
@@ -166,60 +148,56 @@
   gap: 20px;
 }
 
-.section__title {
+.section-title {
   color: var(--sc-title-color, #ff0070);
   font-size: inherit;
   font-weight: 700;
   line-height: 1.3;
 }
 
-.section__subtitle {
+.title-decor {
   color: var(--st-color, #000028);
   background-color: var(--accent-color, #ff0070);
   font-weight: 700;
   line-height: 1.3;
-  margin-block-end: 10px;
 }
 
-.section__subtitle-lightweight {
+.section__lightweight {
   font-weight: 400;
 }
 
-.section__subtitle-text {
+.section__text {
   color: var(--text-color, #f1b2ce);
   font-style: normal;
   font-weight: 400;
   line-height: 1.3;
+  margin-block-start: 10px;
 }
 
-.section__subtitle-link {
+.section__link {
   text-shadow: 3px 2px var(--accent-color, #ff0070);
   text-decoration-line: none;
   cursor: pointer;
 }
 
-.section__subtitle-link:focus-visible {
+.section__link:focus-visible {
   outline: 1px solid currentColor;
 }
 
-.section__subtitle-link:hover {
+.section__link:hover {
   border-block-end: 1px solid var(--text-color, #f1b2ce);
 }
 
-.section__container-items:not(:last-of-type) {
+.section__list-item:not(:last-of-type) {
   margin-block-end: 20px;
 }
 
 .attention__title {
   max-inline-size: 30.7vw;
   margin-block-end: 19px;
-  color: var(--sc-title-color, #ff0070);
-  font-size: inherit;
-  font-weight: 700;
-  line-height: 1.3;
 }
 
-.attention__container {
+.attention__list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
@@ -229,11 +207,7 @@
   padding: 0 20px 60px 20px;
 }
 
-.gallery__subtitle {
-  color: var(--st-color, #000028);
-  background-color: var(--accent-color);
-  font-weight: 700;
-  line-height: 1.3;
+.gallery__title {
   margin-block-end: 20px;
 }
 
@@ -244,34 +218,34 @@
   gap: 20px;
 }
 
-.image {
+.gallery__container-image {
   height: 100%;
   width: 100%;
   object-fit: cover;
   background-position: center;
 }
 
-.gallery__container-image-1 {
+.gallery__container-image:nth-child(1) {
   grid-column: 1 / 3;
   grid-row: 1 / 2;
 }
 
-.gallery__container-image-2 {
+.gallery__container-image:nth-child(2) {
   grid-column: 3 / 4;
   grid-row: 1 / 3;
 }
 
-.gallery__container-image-3 {
+.gallery__container-image:nth-child(3) {
   grid-column: 1 / 2;
   grid-row: 2 / 4;
 }
 
-.gallery__container-image-4 {
+.gallery__container-image:nth-child(4) {
   grid-column: 2/3;
   grid-row: 2/3;
 }
 
-.gallery__container-image-5 {
+.gallery__container-image:nth-child(5) {
   grid-column: 2/4;
   grid-row: 3/4;
 }
@@ -308,7 +282,7 @@
     flex-direction: column;
   }
 
-  .attention__container {
+  .attention__list {
     grid-template-columns: 1fr;
     gap: 0;
   }
@@ -362,8 +336,8 @@
     flex-direction: column;
   }
 
-  .section__subtitle-link {
-    text-shadow: 2px 1px var(--accent-color);
+  .section__link {
+    text-shadow: 2px 1px var(--accent-color, #ff0070);
   }
 
   .gallery__container {
@@ -372,7 +346,7 @@
     gap: 10px;
   }
 
-  .gallery__subtitle {
+  .gallery__title {
     margin-block-end: 10px;
   }
 

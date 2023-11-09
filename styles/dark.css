@@ -20,3 +20,11 @@
   --sc-title-color: #ff0070;
   --bg-image: url(../images/cover-image-dark.png);
 }
+
+.page.theme_dark .rec::before {
+  opacity: 1;
+}
+
+.page.theme_dark .rec::after {
+  opacity: 1;
+}
